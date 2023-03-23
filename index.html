@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>J-x</title>
+    <style>
+        :root {
+            --background-color: #1a98ad;
+            --color: #230329;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+        body {
+            background: var(--background-color);
+            color: var(--color);
+            font-family: sans-serif;
+            font-size: 62.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #countdown {
+            font-size: 15.0rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown"></div>
+    <script>
+        let currentDate = new Date().setHours(0,0,0);
+        let endDate = new Date('2023-06-12T00:00:00');
+        // 8.64e7 = number of ms per day
+        let diff = Math.round((endDate - currentDate) / 8.64e7);
+        document.querySelector('#countdown').innerHTML = `J - ${diff}`;
+    </script>
+</body>
+</html>
