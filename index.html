@@ -1,45 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>J-x</title>
-    <style>
-        :root {
-            --background-color: #1a98ad;
-            --color: #230329;
-        }
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-        html {
-            width: 100vw;
-            height: 100vh;
-        }
-        body {
-            background: var(--background-color);
-            color: var(--color);
-            font-family: sans-serif;
-            font-size: 62.5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        #countdown {
-            font-size: 15.0rem;
-            font-weight: bold;
-        }
-    </style>
+    <title>The final countdown</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="countdown"></div>
+    <div class="row">
+        <div class="digit column">
+            <span id="days" class="time center">00</span>
+            <span class="label center">jours</span>
+        </div>
+        <div>
+            <span class="separator">:</span>
+        </div>
+        <div class="digit column">
+            <span id="hours" class="time center">00</span>
+            <span class="label center">heures</span>
+        </div>
+        <div>
+            <span class="separator">:</span>
+        </div>
+        <div class="digit column">
+            <span id="minutes" class="time center">00</span>
+            <span class="label center">minutes</span>
+        </div>
+        <div>
+            <span class="separator">:</span>
+        </div>
+        <div class="digit column">
+            <span id="seconds" class="time center">00</span>
+            <span class="label center">secondes</span>
+        </div>
+    </div>
     <script>
-        let currentDate = new Date().setHours(0,0,0);
-        let endDate = new Date('2023-06-12T00:00:00');
-        // 8.64e7 = number of ms per day
-        let diff = Math.round((endDate - currentDate) / 8.64e7);
-        document.querySelector('#countdown').innerHTML = `J - ${diff}`;
+        let days = document.querySelector('#days');
+        let hours = document.querySelector('#hours');
+        let minutes = document.querySelector('#minutes');
+        let seconds = document.querySelector('#seconds');
+
+        let time = null;
+        let target = new Date('2023-06-12T09:00:00');
+
+        function refreshCounter() {
+            console.log('yes');
+
+            time = new Date(target.getTime() - new Date().getTime());
+
+            days.innerHTML = Math.round(time / 8.64e7);
+            hours.innerHTML = time.getHours();
+            minutes.innerHTML = time.getMinutes();
+            seconds.innerHTML = time.getSeconds();
+        }
+
+        setInterval(refreshCounter, 1000);
     </script>
 </body>
 </html>
