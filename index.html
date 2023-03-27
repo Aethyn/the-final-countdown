@@ -33,27 +33,6 @@
             <span class="label center">secondes</span>
         </div>
     </div>
-    <script>
-        let days = document.querySelector('#days');
-        let hours = document.querySelector('#hours');
-        let minutes = document.querySelector('#minutes');
-        let seconds = document.querySelector('#seconds');
-
-        let time = null;
-        let target = new Date('2023-06-12T09:00:00');
-
-        function refreshCounter() {
-            console.log('yes');
-
-            time = new Date(target.getTime() - new Date().getTime());
-
-            days.innerHTML = Math.round(time / 8.64e7);
-            hours.innerHTML = time.getHours();
-            minutes.innerHTML = time.getMinutes();
-            seconds.innerHTML = time.getSeconds();
-        }
-
-        setInterval(refreshCounter, 1000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
