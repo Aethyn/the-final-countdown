@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
-    --background-color: #1a98ad;
-    --color: #230329;
+    --background-color: #0d1117;
+    --color: #f1bddb;
 }
 * {
     margin: 0px;
@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background-color 1000ms linear, color 1000ms linear;
 }
 
 .row {
