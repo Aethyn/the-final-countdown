@@ -7,3 +7,4 @@ Direct link here (Github Pages) 👉 https://aethyn.github.io/the-final-countdow
 
 * to [https://randoma11y.com/](https://randoma11y.com/) for the choice of colors.  
 * to Github for the fabulous Github Pages tool.
+* to [@tholman](https://github.com/tholman) for his cool [GitHub Corners](https://github.com/tholman/github-corners) project

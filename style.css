@@ -52,3 +52,11 @@ body {
     font-size: 10.0rem;
     font-weight: bold;
 }
+
+#github-corner {
+    fill: var(--color);
+    color: var(--background-color);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
