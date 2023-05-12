@@ -60,3 +60,9 @@ body {
     top: 0px;
     right: 0px;
 }
+
+.gone {
+    font-size: 10.0rem;
+    font-weight: bold;
+    text-align: center;
+}
